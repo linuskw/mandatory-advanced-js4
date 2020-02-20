@@ -1,0 +1,36 @@
+.gridWrap{
+  height: 480px;
+  width: 560px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gridCell{
+  width: 80px;
+  height: 80px;
+  background-color: blue;
+}
+
+.gridCellInner{
+  width: 75px;
+  height: 75px;
+  margin: 2.5px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.gridCellInnerRed{
+  width: 75px;
+  height: 75px;
+  margin: 2.5px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.gridCellInnerYellow{
+  width: 75px;
+  height: 75px;
+  margin: 2.5px;
+  border-radius: 50%;
+  background-color: yellow;
+}
