@@ -23,30 +23,33 @@ class Grid extends React.Component {
   onClickCell(index){
     let cellIndex;
     console.log("You clicked cell: " + index);
-    if (gridArray[index + 35] === 0) {
-      cellIndex = index + 35;
-      this.setState({ clickIndex: this.state.clickIndex + 1 });
-      this.renderPlayer(cellIndex)
-    } else if (gridArray[index + 28] === 0) {
-        cellIndex = index + 28;
+    if (!this.state.result) {
+      if (gridArray[index + 35] === 0) {
+        cellIndex = index + 35;
         this.setState({ clickIndex: this.state.clickIndex + 1 });
-        this.renderPlayer(cellIndex);
-    } else if (gridArray[index + 21] === 0) {
-        cellIndex = index + 21;
-        this.setState({ clickIndex: this.state.clickIndex + 1 });
-        this.renderPlayer(cellIndex);
-    } else if (gridArray[index + 14] === 0) {
-        cellIndex = index + 14;
-        this.setState({ clickIndex: this.state.clickIndex + 1 });
-        this.renderPlayer(cellIndex);
-    } else if (gridArray[index + 7] === 0) {
-        cellIndex = index + 7;
-        this.setState({ clickIndex: this.state.clickIndex + 1 });
-        this.renderPlayer(cellIndex);
-    } else if (gridArray[index] === 0) {
-        this.renderPlayer(index);
-        this.setState({ clickIndex: this.state.clickIndex + 1 });
+        this.renderPlayer(cellIndex)
+      } else if (gridArray[index + 28] === 0) {
+          cellIndex = index + 28;
+          this.setState({ clickIndex: this.state.clickIndex + 1 });
+          this.renderPlayer(cellIndex);
+      } else if (gridArray[index + 21] === 0) {
+          cellIndex = index + 21;
+          this.setState({ clickIndex: this.state.clickIndex + 1 });
+          this.renderPlayer(cellIndex);
+      } else if (gridArray[index + 14] === 0) {
+          cellIndex = index + 14;
+          this.setState({ clickIndex: this.state.clickIndex + 1 });
+          this.renderPlayer(cellIndex);
+      } else if (gridArray[index + 7] === 0) {
+          cellIndex = index + 7;
+          this.setState({ clickIndex: this.state.clickIndex + 1 });
+          this.renderPlayer(cellIndex);
+      } else if (gridArray[index] === 0) {
+          this.renderPlayer(index);
+          this.setState({ clickIndex: this.state.clickIndex + 1 });
+      }
     }
+
     console.log(gridArray);
   }
 
